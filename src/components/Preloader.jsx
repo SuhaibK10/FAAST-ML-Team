@@ -32,7 +32,7 @@ export default function Preloader({ onComplete }) {
           exit={{ clipPath: 'inset(0 0 100% 0)' }}
           transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
         >
-          <img src="/faast-logo.png" alt="FAAST" className="w-20 h-auto opacity-90 mb-4" />
+          <img src="/faast-logo.png" alt="FAAST" className="w-30 h-auto opacity-100 mb-8" />
           <span className="font-[family-name:var(--font-display)] text-[clamp(64px,14vw,140px)] font-extrabold text-fg leading-none tracking-[-4px]">
             {count}
           </span>
