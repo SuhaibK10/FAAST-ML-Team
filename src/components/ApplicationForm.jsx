@@ -142,10 +142,10 @@ export default function ApplicationForm() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <p className="font-[family-name:var(--font-mono)] text-[10px] text-mint tracking-[3px] uppercase mb-3">Apply</p>
+          
           <h2 className="font-[family-name:var(--font-display)] text-[clamp(24px,3.5vw,36px)] font-bold tracking-[-0.5px] text-fg">
-            Show us what you{' '}
-            <span className="font-[family-name:var(--font-serif)] italic font-normal text-mint">got</span>.
+            Ready to build?<br /> 
+            <span className="font-[family-name:var(--font-display)]  font-bold text-mint">Start here</span>
           </h2>
         </motion.div>
 
@@ -334,7 +334,7 @@ export default function ApplicationForm() {
                       >
                         <Upload size={18} className="text-dim2 group-hover:text-mint transition-colors" />
                         <span className="text-[12px] text-dim2 group-hover:text-dim transition-colors">
-                          Click to upload PDF or DOC
+                          Click to upload PDF 
                         </span>
                         <span className="text-[10px] text-dim2/50">Max 5MB</span>
                       </motion.button>

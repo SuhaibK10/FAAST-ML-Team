@@ -35,7 +35,8 @@ export default function Hero() {
         className="text-[15px] md:text-base text-dim leading-relaxed max-w-lg mb-10"
         variants={fade(0.35)} initial="hidden" animate="visible"
       >
-         Build production grade ML systems and deploy them to solve real-world problems.
+         Build production grade ML systems.  <br></br>Deploy them to solve real-world problems.
+         
       </motion.p>
 
       {/* CTAs */}
