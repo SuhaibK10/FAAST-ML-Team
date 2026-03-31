@@ -7,7 +7,7 @@ const projects = [
     statusColor: 'text-mint',
     statusBg: 'bg-mint-dim border-mint/10',
     title: 'Mule Account Detection',
-    subtitle: 'Anti-Money Laundering · RBIH × IIT Delhi Tryst',
+    subtitle: 'Anti-Money Laundering · Reserve Bank Innovation Hub',
     desc: 'Building ML models to detect mule accounts used in money laundering across 7.4M+ banking transactions. Identifying patterns like dormant activation, rapid pass-through, fan-in/fan-out flows, and structuring below reporting thresholds.',
     stats: [
       { value: '7.4M+', label: 'Transactions' },
