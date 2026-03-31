@@ -4,9 +4,11 @@ import Preloader from './components/Preloader'
 import Hero from './components/Hero'
 import LogoMarquee from './components/LogoMarquee'
 import WhatYouDo from './components/WhatYouDo'
+import Projects from './components/Projects'
 import Mentors from './components/Mentors'
 import ApplicationForm from './components/ApplicationForm'
 import { Instagram, Linkedin, Globe } from 'lucide-react'
+
 
 export default function App() {
   const [loaded, setLoaded] = useState(false)
@@ -47,6 +49,7 @@ export default function App() {
         <Hero />
         <LogoMarquee />
         <WhatYouDo />
+        <Projects />
         <Mentors />
         <ApplicationForm />
 
