@@ -1,29 +1,52 @@
 import { motion } from 'framer-motion'
-import { Database, Shield, Brain, ExternalLink } from 'lucide-react'
+import { Shield, FileSearch, ShoppingCart, ExternalLink } from 'lucide-react'
 
 const projects = [
   {
-    status: 'ACTIVE',
-    statusColor: 'text-mint',
-    statusBg: 'bg-mint-dim border-mint/10',
-    title: 'Mule Account Detection',
-    subtitle: 'Anti-Money Laundering · Reserve Bank Innovation Hub',
-    desc: 'Building ML models to detect mule accounts used in money laundering across 7.4M+ banking transactions. Identifying patterns like dormant activation, rapid pass-through, fan-in/fan-out flows, and structuring below reporting thresholds.',
-    stats: [
-      { value: '7.4M+', label: 'Transactions' },
-      { value: '40K+', label: 'Accounts' },
-      { value: '12', label: 'Mule Patterns' },
-    ],
-    tags: ['XGBoost', 'Anomaly Detection', 'Feature Engineering', 'Temporal Analysis', 'AUC-ROC'],
     icon: Shield,
-    iconColor: 'text-mint',
+    iconColor: 'text-emerald-400',
+    accent: 'from-emerald-500/20 to-emerald-500/0',
+    borderHover: 'rgba(52,211,153,0.15)',
+    title: 'Mule Account Detection System',
+    org: 'Reserve Bank Innovation Hub',
+    desc: 'Engineered an end-to-end anomaly detection pipeline to identify mule accounts across 7.4M+ banking transactions. Implemented temporal feature extraction for 12 known laundering typologies — dormant activation, structuring below ₹50K thresholds, rapid pass-through velocity, fan-in/fan-out graph patterns, and post-mobile-change behavioral spikes. Scored on AUC-ROC with temporal IoU for suspicious activity window precision.',
+    stats: [
+      { value: '7.4M+', label: 'Transactions Processed' },
+      { value: '40K+', label: 'Account Profiles' },
+      { value: '12', label: 'Laundering Typologies' },
+    ],
+    tags: ['XGBoost', 'Graph Analytics', 'Temporal Feature Engineering', 'Anomaly Detection', 'AUC-ROC', 'Behavioral Profiling'],
   },
-  // Add more projects here as the team grows
-  // {
-  //   status: 'UPCOMING',
-  //   title: 'Jane Street Market Prediction',
-  //   ...
-  // },
+  {
+    icon: FileSearch,
+    iconColor: 'text-blue-400',
+    accent: 'from-blue-500/20 to-blue-500/0',
+    borderHover: 'rgba(96,165,250,0.15)',
+    title: 'Intelli-Credit Decisioning Engine',
+    org: 'AI-Powered Credit Appraisal · Corporate Lending',
+    desc: 'Architected a multi-agent AI system for automated corporate credit appraisal — ingesting unstructured data from PDF annual reports, GST filings (GSTR-2A vs 3B reconciliation), bank statements, and MCA filings. Built a Research Agent for real-time web-scale secondary intelligence and a Recommendation Engine generating explainable Credit Appraisal Memos scored on the Five Cs framework with transparent decision logic.',
+    stats: [
+      { value: '3', label: 'Intelligence Pillars' },
+      { value: '5C', label: 'Credit Scoring Framework' },
+      { value: 'Multi-Agent', label: 'Architecture' },
+    ],
+    tags: ['LLM Orchestration', 'RAG Pipeline', 'PDF Extraction', 'Explainable AI', 'Databricks', 'Web Crawling'],
+  },
+  {
+    icon: ShoppingCart,
+    iconColor: 'text-amber-400',
+    accent: 'from-amber-500/20 to-amber-500/0',
+    borderHover: 'rgba(251,191,36,0.15)',
+    title: 'Dynamic Pricing Intelligence',
+    org: 'Amazon ML Challenge · 7,100+ Teams Nationally',
+    desc: 'Developed a large-scale pricing prediction model for Amazon\'s e-commerce catalog — analyzing product titles, descriptions, specifications, and pack quantities across millions of SKUs. Built feature extraction pipelines for multimodal product attributes (brand signals, specification embeddings, quantity normalization) to predict optimal price points at scale. Competed against 7,100+ teams from top engineering colleges nationally.',
+    stats: [
+      { value: '2.2M+', label: 'Product SKUs' },
+      { value: '7,100+', label: 'Competing Teams' },
+      { value: 'NLP', label: 'Core Pipeline' },
+    ],
+    tags: ['Transformer Embeddings', 'Feature Engineering', 'Regression at Scale', 'Multimodal NLP', 'Catalog Intelligence'],
+  },
 ]
 
 export default function Projects() {
@@ -32,7 +55,7 @@ export default function Projects() {
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <motion.div
-          className="text-center mb-14"
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -40,83 +63,77 @@ export default function Projects() {
         >
           <p className="font-[family-name:var(--font-mono)] text-[10px] text-mint tracking-[3px] uppercase mb-3">Projects</p>
           <h2 className="font-[family-name:var(--font-display)] text-[clamp(24px,3.5vw,36px)] font-bold tracking-[-0.5px] text-fg">
-            What we're{' '}
-            <span className="font-[family-name:var(--font-serif)] italic font-normal text-mint">building</span>.
+            Real problems.{' '}
+            <span className="font-[family-name:var(--font-serif)] italic font-normal text-mint">Shipped solutions</span>.
           </h2>
+          <p className="text-sm text-dim mt-3 max-w-md mx-auto">Not tutorials. Not toy datasets. Production-grade ML on industry-scale data.</p>
         </motion.div>
 
-        {/* Project Cards */}
+        {/* Cards */}
         <div className="space-y-5">
           {projects.map((project, i) => (
             <motion.div
               key={project.title}
-              className="p-6 md:p-8 rounded-2xl border border-dim3 bg-surface group relative overflow-hidden"
-              initial={{ opacity: 0, y: 24 }}
+              className="relative rounded-2xl border border-dim3 bg-surface group overflow-hidden"
+              initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              whileHover={{ borderColor: 'rgba(74,222,128,0.12)' }}
+              transition={{ duration: 0.6, delay: i * 0.12 }}
+              whileHover={{ borderColor: project.borderHover }}
             >
-              {/* Top glow line */}
-              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-mint/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              {/* Top gradient accent */}
+              <div className={`absolute top-0 left-0 right-0 h-24 bg-gradient-to-b ${project.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`} />
+              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-              {/* Status + Icon row */}
-              <div className="flex items-center justify-between mb-5">
-                <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[9px] font-semibold tracking-[1.5px] uppercase border ${project.statusBg} ${project.statusColor}`}>
-                  <span className={`w-1.5 h-1.5 rounded-full ${project.statusColor === 'text-mint' ? 'bg-mint animate-pulse' : 'bg-dim2'}`} />
-                  {project.status}
-                </div>
-                <project.icon className={`w-5 h-5 ${project.iconColor} opacity-60`} strokeWidth={1.5} />
-              </div>
-
-              {/* Title */}
-              <h3 className="font-[family-name:var(--font-display)] text-lg md:text-xl font-bold text-fg mb-1 tracking-tight">
-                {project.title}
-              </h3>
-              <p className="font-[family-name:var(--font-mono)] text-[10px] text-dim2 tracking-[1px] uppercase mb-4">
-                {project.subtitle}
-              </p>
-
-              {/* Description */}
-              <p className="text-sm text-dim leading-relaxed mb-6">
-                {project.desc}
-              </p>
-
-              {/* Stats */}
-              <div className="flex gap-8 mb-6">
-                {project.stats.map((stat) => (
-                  <div key={stat.label}>
-                    <div className="font-[family-name:var(--font-display)] text-lg font-bold text-fg">{stat.value}</div>
-                    <div className="text-[10px] text-dim2 uppercase tracking-wide">{stat.label}</div>
+              <div className="relative p-6 md:p-8">
+                {/* Top row */}
+                <div className="flex items-start justify-between mb-5">
+                  <div className="flex items-center gap-3">
+                    <div className={`w-10 h-10 rounded-xl bg-surface-2 border border-dim3 flex items-center justify-center group-hover:border-white/10 transition-colors`}>
+                      <project.icon className={`w-[18px] h-[18px] ${project.iconColor}`} strokeWidth={1.5} />
+                    </div>
+                    <div>
+                      <h3 className="font-[family-name:var(--font-display)] text-base md:text-lg font-bold text-fg tracking-tight">{project.title}</h3>
+                      <p className="font-[family-name:var(--font-mono)] text-[9px] text-dim2 tracking-[1px] uppercase">{project.org}</p>
+                    </div>
                   </div>
-                ))}
-              </div>
+                </div>
 
-              {/* Tags */}
-              <div className="flex flex-wrap gap-1.5">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-2.5 py-1 rounded-full border border-dim3 text-[10px] text-dim2 font-medium"
+                {/* Description */}
+                <p className="text-[13px] text-dim leading-[1.7] mb-6">{project.desc}</p>
+
+                {/* Stats row */}
+                <div className="flex gap-6 md:gap-10 mb-6 pb-6 border-b border-dim3">
+                  {project.stats.map((stat) => (
+                    <div key={stat.label}>
+                      <div className="font-[family-name:var(--font-display)] text-base md:text-lg font-bold text-fg leading-tight">{stat.value}</div>
+                      <div className="text-[9px] text-dim2 uppercase tracking-[1px] mt-0.5">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Tags + Credit row */}
+                <div className="flex items-end justify-between gap-4">
+                  <div className="flex flex-wrap gap-1.5">
+                    {project.tags.map((tag) => (
+                      <span key={tag} className="px-2.5 py-1 rounded-full border border-dim3 text-[9px] text-dim2 font-medium tracking-wide">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <a
+                    href="https://www.linkedin.com/in/suhaibkhan10/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-shrink-0 text-[10px] text-dim2 hover:text-mint transition-colors no-underline whitespace-nowrap"
                   >
-                    {tag}
-                  </span>
-                ))}
+                    by <span className="text-mint/70 hover:text-mint">Suhaib Khan</span>
+                  </a>
+                </div>
               </div>
             </motion.div>
           ))}
         </div>
-
-        {/* More coming */}
-        <motion.p
-          className="text-center mt-8 text-sm text-dim"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-        >
-          More projects loading as the team grows.
-        </motion.p>
       </div>
     </section>
   )
