@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Shield, FileSearch, ShoppingCart, ExternalLink } from 'lucide-react'
+import { Shield, FileSearch, ShoppingCart } from 'lucide-react'
 
 const projects = [
   {
@@ -53,7 +53,6 @@ export default function Projects() {
   return (
     <section id="projects" className="py-20 md:py-28 px-6 md:px-12">
       <div className="max-w-4xl mx-auto">
-        {/* Header */}
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 16 }}
@@ -69,7 +68,6 @@ export default function Projects() {
           <p className="text-sm text-dim mt-3 max-w-md mx-auto">Not tutorials. Not toy datasets. Production-grade ML on industry-scale data.</p>
         </motion.div>
 
-        {/* Cards */}
         <div className="space-y-5">
           {projects.map((project, i) => (
             <motion.div
@@ -81,15 +79,14 @@ export default function Projects() {
               transition={{ duration: 0.6, delay: i * 0.12 }}
               whileHover={{ borderColor: project.borderHover }}
             >
-              {/* Top gradient accent */}
-              <div className={`absolute top-0 left-0 right-0 h-24 bg-gradient-to-b ${project.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`} />
+              {/* Top gradient accent — always visible */}
+              <div className={`absolute top-0 left-0 right-0 h-24 bg-gradient-to-b ${project.accent} opacity-100 pointer-events-none`} />
               <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
               <div className="relative p-6 md:p-8">
-                {/* Top row */}
                 <div className="flex items-start justify-between mb-5">
                   <div className="flex items-center gap-3">
-                    <div className={`w-10 h-10 rounded-xl bg-surface-2 border border-dim3 flex items-center justify-center group-hover:border-white/10 transition-colors`}>
+                    <div className="w-10 h-10 rounded-xl bg-surface-2 border border-dim3 flex items-center justify-center group-hover:border-white/10 transition-colors">
                       <project.icon className={`w-[18px] h-[18px] ${project.iconColor}`} strokeWidth={1.5} />
                     </div>
                     <div>
@@ -99,10 +96,8 @@ export default function Projects() {
                   </div>
                 </div>
 
-                {/* Description */}
                 <p className="text-[13px] text-dim leading-[1.7] mb-6">{project.desc}</p>
 
-                {/* Stats row */}
                 <div className="flex gap-6 md:gap-10 mb-6 pb-6 border-b border-dim3">
                   {project.stats.map((stat) => (
                     <div key={stat.label}>
@@ -112,7 +107,6 @@ export default function Projects() {
                   ))}
                 </div>
 
-                {/* Tags + Credit row */}
                 <div className="flex items-end justify-between gap-4">
                   <div className="flex flex-wrap gap-1.5">
                     {project.tags.map((tag) => (
@@ -127,7 +121,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="flex-shrink-0 text-[10px] text-dim2 hover:text-mint transition-colors no-underline whitespace-nowrap"
                   >
-                    by <span className="text-mint/70 hover:text-mint">Suhaib Khan</span>
+                    by <span className="text-mint/70 hover:text-mint underline underline-offset-2 decoration-mint/30 hover:decoration-mint">Suhaib Khan ↗</span>
                   </a>
                 </div>
               </div>
