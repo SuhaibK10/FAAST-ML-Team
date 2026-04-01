@@ -25,7 +25,7 @@ export default function Hero() {
         className="font-[family-name:var(--font-display)] text-[clamp(28px,5vw,52px)] font-bold leading-[1.3] tracking-[-1px] text-fg max-w-2xl mb-5"
         variants={fade(0.2)} initial="hidden" animate="visible"
       >
-        FAAST AMU's ML Full Stack{' '}
+        FAAST AMU's ML {' '}
        <span className="font-[family-name:var(--font-display)] font-bold text-mint">Team</span>{' '}
         
       </motion.h1>
