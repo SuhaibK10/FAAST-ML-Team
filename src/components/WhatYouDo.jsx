@@ -7,8 +7,7 @@ const items = [
   { icon: GitBranch, label: 'MLOps & DevOps', desc: 'Docker, CI/CD, Cloud deployment.', color: 'text-blue' },
   { icon: Trophy, label: 'Compete Globally', desc: 'Competition that matters.', color: 'text-mint' },
   { icon: Globe, label: 'Industry Collaboration', desc: 'Work with quant research firms on live problems.', color: 'text-violet' },
-  { icon: Code2, label: 'Full Stack AI', desc: 'Train it, deploy it, build the frontend around it.', color: 'text-mint' },
-  { icon: Rocket, label: 'Career Velocity', desc: 'ML Engineer, Quant Analyst, MLOps — real career paths.', color: 'text-violet' },
+  { icon: Code2, label: 'Full Stack AI', desc: 'Train it, deploy it, build the frontend around it.', color: 'text-mint' }
 ]
 
 export default function WhatYouDo() {
