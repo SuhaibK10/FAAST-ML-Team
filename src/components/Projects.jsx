@@ -22,7 +22,7 @@ const projects = [
     iconColor: 'text-blue-400',
     accent: 'from-blue-500/20 to-blue-500/0',
     borderHover: 'rgba(96,165,250,0.15)',
-    title: 'Intelli-Credit Decisioning Engine',
+    title: 'Credit Decision System',
     org: 'AI-Powered Credit Appraisal · Corporate Lending',
     desc: 'Architected a multi-agent AI system for automated corporate credit appraisal that ingests unstructured data from PDF annual reports, GST filings (GSTR-2A vs 3B reconciliation), bank statements, and MCA filings. Built a Research Agent for real-time web-scale secondary intelligence and a Recommendation Engine generating explainable Credit Appraisal Memos scored on the Five Cs framework with transparent decision logic.',
     stats: [
@@ -37,7 +37,7 @@ const projects = [
     iconColor: 'text-amber-400',
     accent: 'from-amber-500/20 to-amber-500/0',
     borderHover: 'rgba(251,191,36,0.15)',
-    title: 'Dynamic Pricing Intelligence',
+    title: 'Dynamic Pricing Optimization',
     org: 'Amazon ML Challenge ',
     desc: 'Developed a large-scale pricing prediction model for Amazon\'s e-commerce catalog — analyzing product titles, descriptions, specifications, and pack quantities across millions of SKUs. Built feature extraction pipelines for multimodal product attributes (brand signals, specification embeddings, quantity normalization) to predict optimal price points at scale. Competed against 7,100+ teams from top engineering colleges nationally.',
     stats: [
