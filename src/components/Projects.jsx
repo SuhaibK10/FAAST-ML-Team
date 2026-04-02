@@ -9,7 +9,7 @@ const projects = [
     borderHover: 'rgba(52,211,153,0.15)',
     title: 'Mule Account Detection System',
     org: 'Reserve Bank Innovation Hub',
-    desc: 'Engineered an end-to-end anomaly detection pipeline to identify mule accounts across 7.4M+ banking transactions. Implemented temporal feature extraction for 12 known laundering typologies — dormant activation, structuring below ₹50K thresholds, rapid pass-through velocity, fan-in/fan-out graph patterns, and post-mobile-change behavioral spikes. Scored on AUC-ROC with temporal IoU for suspicious activity window precision.',
+    desc: 'Engineered an end-to-end anomaly detection pipeline to identify mule accounts across 7.4M+ banking transactions. Implemented temporal feature extraction for 12 known laundering typologies such as dormant activation, structuring below ₹50K thresholds, rapid pass-through velocity, fan-in/fan-out graph patterns, and post-mobile-change behavioral spikes. Scored on AUC-ROC with temporal IoU for suspicious activity window precision.',
     stats: [
       { value: '7.4M+', label: 'Transactions Processed' },
       { value: '40K+', label: 'Account Profiles' },
@@ -24,7 +24,7 @@ const projects = [
     borderHover: 'rgba(96,165,250,0.15)',
     title: 'Intelli-Credit Decisioning Engine',
     org: 'AI-Powered Credit Appraisal · Corporate Lending',
-    desc: 'Architected a multi-agent AI system for automated corporate credit appraisal — ingesting unstructured data from PDF annual reports, GST filings (GSTR-2A vs 3B reconciliation), bank statements, and MCA filings. Built a Research Agent for real-time web-scale secondary intelligence and a Recommendation Engine generating explainable Credit Appraisal Memos scored on the Five Cs framework with transparent decision logic.',
+    desc: 'Architected a multi-agent AI system for automated corporate credit appraisal that ingests unstructured data from PDF annual reports, GST filings (GSTR-2A vs 3B reconciliation), bank statements, and MCA filings. Built a Research Agent for real-time web-scale secondary intelligence and a Recommendation Engine generating explainable Credit Appraisal Memos scored on the Five Cs framework with transparent decision logic.',
     stats: [
       { value: '3', label: 'Intelligence Pillars' },
       { value: '5C', label: 'Credit Scoring Framework' },
@@ -38,7 +38,7 @@ const projects = [
     accent: 'from-amber-500/20 to-amber-500/0',
     borderHover: 'rgba(251,191,36,0.15)',
     title: 'Dynamic Pricing Intelligence',
-    org: 'Amazon ML Challenge · 7,100+ Teams Nationally',
+    org: 'Amazon ML Challenge ',
     desc: 'Developed a large-scale pricing prediction model for Amazon\'s e-commerce catalog — analyzing product titles, descriptions, specifications, and pack quantities across millions of SKUs. Built feature extraction pipelines for multimodal product attributes (brand signals, specification embeddings, quantity normalization) to predict optimal price points at scale. Competed against 7,100+ teams from top engineering colleges nationally.',
     stats: [
       { value: '2.2M+', label: 'Product SKUs' },
@@ -65,7 +65,7 @@ export default function Projects() {
             Real problems.{' '}
             <span className="font-[family-name:var(--font-serif)] italic font-normal text-mint">Shipped solutions</span>.
           </h2>
-          <p className="text-sm text-dim mt-3 max-w-md mx-auto">Not tutorials. Not toy datasets. Production-grade ML on industry-scale data.</p>
+          <p className="text-sm text-dim mt-3 max-w-md mx-auto"> Production-grade ML on industry-scale data.</p>
         </motion.div>
 
         <div className="space-y-5">
