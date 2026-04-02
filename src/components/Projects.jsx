@@ -39,7 +39,7 @@ const projects = [
     borderHover: 'rgba(251,191,36,0.15)',
     title: 'Dynamic Pricing Optimization',
     org: 'Amazon ML Challenge ',
-    desc: 'Developed a large-scale pricing prediction model for Amazon\'s e-commerce catalog — analyzing product titles, descriptions, specifications, and pack quantities across millions of SKUs. Built feature extraction pipelines for multimodal product attributes (brand signals, specification embeddings, quantity normalization) to predict optimal price points at scale. Competed against 7,100+ teams from top engineering colleges nationally.',
+    desc: 'Developed a large-scale pricing prediction model for Amazon\'s e-commerce catalog — analyzing product titles, descriptions, specifications, and pack quantities across millions of SKUs. Built feature extraction pipelines for multimodal product attributes (brand signals, specification embeddings, quantity normalization) to predict optimal price points at scale.',
     stats: [
       { value: '2.2M+', label: 'Product SKUs' },
       { value: '7,100+', label: 'Competing Teams' },
