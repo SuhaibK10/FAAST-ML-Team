@@ -7,7 +7,7 @@ const projects = [
     iconColor: 'text-emerald-400',
     accent: 'from-emerald-500/20 to-emerald-500/0',
     borderHover: 'rgba(52,211,153,0.15)',
-    title: 'Mule Account Detection System',
+    title: 'Mule Account Detection ',
     org: 'Reserve Bank Innovation Hub',
     desc: 'Engineered an end-to-end anomaly detection pipeline to identify mule accounts across 7.4M+ banking transactions. Implemented temporal feature extraction for 12 known laundering typologies such as dormant activation, structuring below ₹50K thresholds, rapid pass-through velocity, fan-in/fan-out graph patterns, and post-mobile-change behavioral spikes. Scored on AUC-ROC with temporal IoU for suspicious activity window precision.',
     stats: [
@@ -32,21 +32,7 @@ const projects = [
     ],
     tags: ['LLM Orchestration', 'RAG Pipeline', 'PDF Extraction', 'Explainable AI', 'Databricks', 'Web Crawling'],
   },
-  {
-    icon: ShoppingCart,
-    iconColor: 'text-amber-400',
-    accent: 'from-amber-500/20 to-amber-500/0',
-    borderHover: 'rgba(251,191,36,0.15)',
-    title: 'Dynamic Pricing Optimization',
-    org: 'Amazon ML Challenge ',
-    desc: 'Developed a large-scale pricing prediction model for Amazon\'s e-commerce catalog — analyzing product titles, descriptions, specifications, and pack quantities across millions of SKUs. Built feature extraction pipelines for multimodal product attributes (brand signals, specification embeddings, quantity normalization) to predict optimal price points at scale.',
-    stats: [
-      { value: '2.2M+', label: 'Product SKUs' },
-      { value: '7,100+', label: 'Competing Teams' },
-      { value: 'NLP', label: 'Core Pipeline' },
-    ],
-    tags: ['Transformer Embeddings', 'Feature Engineering', 'Regression at Scale', 'Multimodal NLP', 'Catalog Intelligence'],
-  },
+  
 ]
 
 export default function Projects() {
