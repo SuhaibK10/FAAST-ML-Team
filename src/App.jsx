@@ -8,11 +8,16 @@ import Projects from './components/Projects'
 import Mentors from './components/Mentors'
 import ApplicationForm from './components/ApplicationForm'
 import { Instagram, Linkedin, Globe } from 'lucide-react'
+import WebinarRegister from './components/WebinarRegister'
+
 
 
 export default function App() {
   const [loaded, setLoaded] = useState(false)
   const onComplete = useCallback(() => setLoaded(true), [])
+  if (window.location.pathname === '/webinar') {
+  return <WebinarRegister />
+}
 
   return (
     <>
