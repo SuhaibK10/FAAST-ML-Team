@@ -71,13 +71,7 @@ export default function WebinarRegister() {
             See you on <span className="text-mint font-semibold">12 April at 7:30 PM</span> on Google Meet.
           </p>
           <p className="text-xs text-dim2">The link will be shared before the session.</p>
-          <motion.a
-            href="/"
-            className="mt-8 px-6 py-2.5 rounded-full border border-dim3 text-dim text-xs no-underline hover:text-fg hover:border-white/10 transition-colors"
-            whileHover={{ y: -1 }}
-          >
-            ← Back to Home
-          </motion.a>
+        
         </motion.div>
       </div>
     )
