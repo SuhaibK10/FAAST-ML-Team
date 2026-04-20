@@ -17,7 +17,7 @@ export default function Hero() {
         variants={fade(0.1)} initial="hidden" animate="visible"
       >
         <span className="w-1.5 h-1.5 rounded-full bg-mint animate-blink shadow-[0_0_6px_var(--color-mint)]" />
-        <span className="font-[family-name:var(--font-mono)] text-[10px] text-mint tracking-[2px] uppercase">Applications Open Until 21 April, 3PM</span>
+        <span className="font-[family-name:var(--font-mono)] text-[10px] text-mint tracking-[2px] uppercase">Applications Open Until 21 April, 1PM</span>
       </motion.div>
 
       {/* Heading */}
